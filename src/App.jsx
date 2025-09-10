@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import suedAlien1 from './assets/sued-alien-1.avif'
 import LogoPuma from './assets/logo-puma-branco.png'
+import LogoInsta from './assets/instagram.svg'
+import LogoDiscord from './assets/discord.svg'
+import LogoWhats from './assets/whatsapp.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -57,7 +60,19 @@ function App() {
 
         <footer>
 
-          <img src="" alt="" />
+          <img src={LogoPuma} alt="" className="logo-footer" />
+
+          <div className="social-footer">
+            <div className="icon-social">
+              <img src={LogoInsta} alt="" className="instagram" />
+            </div>
+            <div className="icon-social">
+              <img src={LogoDiscord} alt="" className="discord" />
+            </div>
+            <div className="icon-social">
+              <img src={LogoWhats} alt="" className="whatsapp" />
+            </div>
+          </div>
 
           <p className="txt-footer">
             PUMA SPORTS LTDA CNPJ 05.406.034/0023-00 Inscrição Estadual 278.205.224.119 Endereço: Rua Passadena 104 - Parque Industrial, Cotia - SP CEP: 06715864.
