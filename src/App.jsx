@@ -5,6 +5,8 @@ import LogoPuma from './assets/logo-puma-branco.png'
 import LogoInsta from './assets/instagram.svg'
 import LogoDiscord from './assets/discord.svg'
 import LogoWhats from './assets/whatsapp.svg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,21 @@ function App() {
   return (
     <>
       <main>
-        <header></header>
+        <header>
+          {/* Aqui fica o SLIDER */}  
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+            ...
+          </Swiper>
+        </header>
         <section className="produtos">
           
           {/* Card 1 */}
@@ -64,13 +80,19 @@ function App() {
 
           <div className="social-footer">
             <div className="icon-social">
-              <img src={LogoInsta} alt="" className="instagram" />
+              <a href="https://www.instagram.com/pumabrasil/" target="_blank">
+                <img src={LogoInsta} alt="" className="instagram" />
+              </a>
             </div>
             <div className="icon-social">
-              <img src={LogoDiscord} alt="" className="discord" />
+              <a href="https://discord.com/invite/puma" target="_blank">
+                <img src={LogoDiscord} alt="" className="discord" />
+              </a>
             </div>
             <div className="icon-social">
-              <img src={LogoWhats} alt="" className="whatsapp" />
+              <a href="https://web.whatsapp.com/" target="_blank">
+                <img src={LogoWhats} alt="" className="whatsapp" />
+              </a>
             </div>
           </div>
 
