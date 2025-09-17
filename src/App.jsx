@@ -5,6 +5,8 @@ import LogoPuma from './assets/logo-puma-branco.png'
 import LogoInsta from './assets/instagram.svg'
 import LogoDiscord from './assets/discord.svg'
 import LogoWhats from './assets/whatsapp.svg'
+import Slider1 from './assets/slider1.jpg'
+import Slider2 from './assets/slider2.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -22,8 +24,12 @@ function App() {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>
+              <img src={Slider1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Slider2} alt="" />
+            </SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
             ...
