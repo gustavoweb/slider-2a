@@ -7,8 +7,12 @@ main{
 }
 header{
   width: 100%;
-  height: 40vh;
-  background: yellow;
+  height: auto;
+  background: #fff;
+}
+.mySwiper img{
+  width: 100%;
+  height: auto;
 }
 .produtos{
   width: 100%;
