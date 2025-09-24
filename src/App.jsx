@@ -7,7 +7,10 @@ import LogoDiscord from './assets/discord.svg'
 import LogoWhats from './assets/whatsapp.svg'
 import Slider1 from './assets/slider1.jpg'
 import Slider2 from './assets/slider2.jpg'
+import Slider3 from './assets/slider3.jpg'
+import Slider4 from './assets/slider4.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css';
 
 function App() {
@@ -19,10 +22,15 @@ function App() {
         <header>
           {/* Aqui fica o SLIDER */}  
           <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            modules={[Autoplay]}
+            spaceBetween={0}
+            slidesPerView={1}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mySwiper"
           >
             <SwiperSlide>
               <img src={Slider1} alt="" />
